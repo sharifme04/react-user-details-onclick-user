@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 class UserDetails extends Component {
   constructor(props){
     super(props);
-    this.postData = this.props.data.filter(user => user._id == this.props.match.params.postID)
-    console.log(this.postData);
+    this.userData = this.props.data.filter(user => user._id == this.props.match.params.postID)
+    console.log(this.userData);
   }
 
   render() {
-    const user = this.postData[0];
+    const user = this.userData[0];
     console.log(user);
     return (
       <div className="row">
@@ -25,6 +25,7 @@ class UserDetails extends Component {
               </div>
             </div>
            </div>
+
          </div>
         </div>
     );

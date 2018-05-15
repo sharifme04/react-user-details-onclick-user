@@ -20,6 +20,7 @@ class User extends Component {
       <div className="container">
       <Switch>
         <Route exact path="/" render={()=>(
+          <div className="table-responsive">
           <table className="table table-default">
             <thead>
               <tr>
@@ -31,6 +32,7 @@ class User extends Component {
               {User}
             </tbody>
           </table>
+          </div>
       )}/>
        <Route path="/:postID" render={(props)=> (
            <UserDetails {...this.state} {...props}/>
